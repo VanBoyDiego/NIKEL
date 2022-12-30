@@ -1,6 +1,6 @@
-const myModal = new bootstrap.modal("#transaction-modal");
-let logged = sessionstorage.getitem("logged");
-const session = localStorage.getitem("session");
+const myModal = new bootstrap.Modal("#transaction-modal");
+let logged = sessionStorage.getItem("logged")
+const session = localStorage.getItem("session");
 
 let data = { 
     transactions: []
@@ -36,11 +36,11 @@ document.getElementById("transaction-form").addEventListener("submit", function(
 
 });
 
-checkLogged ();
+checklogged();
 
-function checklogged () {
+function checklogged() {
     if(session) {
-        sessionstorage.setitem("logged", session);
+        sessionstorage.setItem("logged", session);
         logged = session;
     }
 
@@ -49,7 +49,7 @@ function checklogged () {
         return;
     }
 
-    const dataUser = localstorage.getitem(logged);
+    const dataUser = localstorage.getItem(logged);
     if(dataUser) {
         data=JSON.parse(dataUser);
     }
