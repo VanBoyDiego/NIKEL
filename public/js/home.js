@@ -49,7 +49,7 @@ function checklogged() {
         return;
     }
 
-    const dataUser = localstorage.getItem(logged);
+    const dataUser = localStorage.getItem (logged);
     if(dataUser) {
         data=JSON.parse(dataUser);
     }

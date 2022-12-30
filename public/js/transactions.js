@@ -1,6 +1,6 @@
 const myModal = new bootstrap.Modal("#transaction-modal");
-let logged = sessionstorage.getitem("logged");
-const session = localStorage.getitem("session");
+let logged = sessionStorage.getItem("logged")
+const session = localStorage.getItem("session")
 
 let data = { 
     transactions: []
@@ -31,7 +31,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
 
 });
 
-checkLogged ();
+checklogged();
 
 function checklogged () {
     if(session) {
@@ -44,7 +44,7 @@ function checklogged () {
         return;
     }
 
-    const dataUser = localstorage.getitem(logged);
+    const dataUser = localStorage.getItem(logged);
     if(dataUser) {
         data=JSON.parse(dataUser);
     }
