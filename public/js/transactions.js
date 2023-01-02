@@ -35,7 +35,7 @@ checklogged();
 
 function checklogged () {
     if(session) {
-        sessionstorage.setitem("logged", session);
+        sessionStorage.setItem("logged", session)
         logged = session;
     }
 

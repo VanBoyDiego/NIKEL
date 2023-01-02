@@ -40,7 +40,7 @@ checklogged();
 
 function checklogged() {
     if(session) {
-        sessionstorage.setItem("logged", session);
+        sessionStorage.setItem("logged", session)
         logged = session;
     }
 
